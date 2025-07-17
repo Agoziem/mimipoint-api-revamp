@@ -34,10 +34,10 @@ def register_middleware(app: FastAPI):
 
     app.add_middleware(
         TrustedHostMiddleware,
-        allowed_hosts=["localhost", "127.0.0.1", "0.0.0.0",
-                       "mimipoint-api-production.up.railway.app",
-                       "mimipoint-api-staging.up.railway.app",
-                       "mimipoint-staging-api.onrender.com",
+        allowed_hosts=["localhost",
+                       "127.0.0.1",
+                       "0.0.0.0",
+                       "mimipoint-api-revamp-production.up.railway.app",
                        "api.mimipoint.com"],
     )
 
