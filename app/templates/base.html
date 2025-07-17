@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="en">
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://react-email-demo-2qlfkicae-resend.vercel.app/static/aws-logo.png"
+    />
+    <title>{% block title %}Email Notification{% endblock %}</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #890E4F;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+      }
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #eee;
+      }
+      .card {
+        background-color: #fff;
+        padding: 25px 35px;
+      }
+      .logo-bar {
+        background-color: #890E4F;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .logo-bar img {
+        display: block;
+        margin: 0 auto;
+        height: 45px;
+        width: 75px;
+      }
+      .logo-bar h1 {
+        color: #fff;
+        font-size: 32px;
+        font-weight: bold;
+        margin: 0;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+      }
+      .text {
+        font-size: 14px;
+        line-height: 24px;
+        color: #333;
+        margin: 29px 0 0 0;
+      }
+      .code-label {
+        font-weight: bold;
+        text-align: center;
+        color: #890E4F;
+        margin-bottom: -3px;
+      }
+      .code {
+        font-size: 36px;
+        font-weight: bold;
+        text-align: center;
+        margin: -1px 0;
+        color: #890E4F;
+      }
+      .subtext {
+        font-size: 14px;
+        color: #333;
+        text-align: center;
+        margin: 0;
+      }
+      .footer {
+        font-size: 12px;
+        padding: 0 20px;
+        color: #333;
+        margin: 24px 0;
+      }
+      .link {
+        color: #2754c5;
+        text-decoration: underline;
+      }
+      .link:hover {
+        text-decoration: none;
+        color: orange;
+      }
+      .hr {
+        width: 100%;
+        border: none;
+        border-top: 1px solid #eaeaea;
+      }
+      .button {
+        background-color: #2754c5;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    {% block content %} {% endblock %}
+  </body>
+</html>
