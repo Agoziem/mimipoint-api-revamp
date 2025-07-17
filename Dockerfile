@@ -3,17 +3,21 @@ FROM python:3.10-slim
 # Install uv
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
 
+# Copy the app source code
 COPY . /app
 WORKDIR /app
 
+# Create virtual environment and install dependencies
 RUN uv venv --python 3.10 --no-cache
 RUN uv sync --frozen --no-cache
 
-EXPOSE 8000
+# Expose the app port
+EXPOSE 8001
 
+# Set environment variables
 ENV HOST=0.0.0.0
-ENV PORT=8000
+ENV PORT=8001
 
-CMD ["/bin/sh", "-c", "/app/.venv/bin/alembic upgrade head && /app/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000"]
-
+# Run Alembic migrations and start the FastAPI app using uv
+CMD ["/bin/sh", "-c", "uv run alembic upgrade head && uv run uvicorn app.main:app --host $HOST --port $PORT"]
 
